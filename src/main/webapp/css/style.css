@@ -1,0 +1,293 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background:#eee;
+    font-size:16px;
+}
+
+header{
+    top:20px;
+    left:0;
+    width:300px;
+    background:#fff;
+    padding:50px 30px;
+    height:calc(100% - 20px);
+}
+.logo img{
+    max-width:100%;
+}
+.login{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+    margin:40px 0 10px;
+    background:#eee;
+}
+.login input{
+    margin-bottom:15px;
+}
+.pl-300{
+    padding-left:320px;
+    padding-top:20px;
+}
+.comu-box{
+    background:#fff;
+    padding:20px;
+    margin-bottom:30px;
+    height:423px;
+}
+.comu-box h2{
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+    font-weight:700;
+    padding-bottom:5px;
+    margin-bottom:15px;
+}
+.picture img{
+    max-width:100%;
+    filter:blur(1px);
+    transition: all 300ms;
+}
+.picture a:hover img{
+    filter:blur(0);
+    transform: scale(1.2);
+}
+.picture{
+    position:relative;
+    display:block;
+    overflow:hidden;
+}
+.txt-box{
+    position:absolute;
+    width:100%;
+    height:50px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    left:0;
+    bottom:0;
+    padding:15px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/**** 공지사항 ****/
+.noticeul li{
+    padding:8px 10px;
+    display:flex;
+    justify-content: space-between;
+    border-bottom:1px dashed #ddd;
+    transition: all 300ms;
+ }
+ .noticeul li:hover{
+    background:#ddd;
+ }
+ .noticeul li a{
+    color:#333;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+ }
+span.notice{
+    padding:1px 15px;
+    margin-right:10px;
+    color:#fff;
+    border-radius:5px;
+    display:inline-block;
+    width: 86px;
+    text-align:center;
+  }
+  .notice1{
+      background:#e7717d;
+  }
+  .notice2{
+      background:#45a29e;
+  }
+  .notice3{
+      background:#123c69;
+  }
+  .notice4{
+      background:#8e8d8a;
+  }
+span.date{
+    float:right;
+}
+.blank{
+    display:inline-block;
+    width:20px;
+    height:10px;
+}
+
+a.blogs{
+    display:flex;
+    color:#333;
+    align-items: center;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    border-bottom:1px dashed #ddd;
+}
+.blogs .thumb{
+    width:80px;
+    height:80px;
+}
+.blogs .thumb img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.blog-text{
+    width:calc(100% - 80px);
+    padding-left:20px;
+    height:90px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    line-height:1.3;
+}
+.blog-text h3{
+    font-size:18px;
+    font-weight:600;
+}
+
+
+/*************** 회원가입 ***************/
+.rg{
+	margin-bottom:30px !important;
+}
+.registerul{
+	padding:20px 40px;
+}
+
+/****************** 아이디, 비밀번호 찾기 ************/
+.rg.findidpass{
+	padding-bottom:50px;
+}
+#findidform, #findpwdform{
+	margin:30px 50px 50px;
+	padding:50px;
+	border:1px solid #ddd;
+}
+
+footer{
+    padding:20px 30px;
+    background:#666;
+    color:#fff;
+}
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1340px;
+    }
+}
+
+
+/********************* admin list ************/
+.memtable{
+	font-size:14px;
+}
+.memtable th{
+	text-align:center;
+	font-weight:600;
+}
+
+/****************** BBS ******************/
+.bbs{
+	padding:30px 50px !important;
+}
+
+/************ LIST **************/
+.bbslist{
+	width:100%;
+	max-width:865px;
+	border-bottom:2px solid #333;
+	margin-bottom:40px;
+}
+.bbslist th{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top: 1px solid #999;
+	border-bottom: 2px solid #666;
+	text-align:center;
+	position:relative;
+}
+
+.bbslist th:not(:last-child)::after{
+	content:"";
+	display:block;
+	width:1px;
+	height:15px;
+	background:#999;
+	position:absolute;
+	top: 15px;
+	right:0;
+}
+.bbslist td{
+	padding:15px;
+	border-bottom:1px solid #999;
+}
+.bbslist td.ellipsis{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+/*************** write **************/
+.w-label{
+	width:100px;
+	padding-right:30px;
+	text-align:right;
+}
+.w-label+input,
+.w-label+textarea{
+	width: calc(100% - 200px);
+}
+.w-label+textarea{
+	height: 200px;
+}
+    
+    
+/* view 스타일 */
+
+/* 본문 내용의 최소 높이를 설정하고 내용이 길어지면 자동으로 확장되도록 */
+.post-content {
+    min-height: 500px;  /* 본문 기본 높이 설정 */
+    overflow: auto; /* 내용이 넘칠 경우 스크롤을 추가할 수 있습니다 */
+    word-wrap: break-word; /* 긴 단어도 자동으로 줄 바꿈되도록 */
+    position: relative;
+    padding-top: 20px; /* 가로줄과의 간격을 위해 패딩 추가 */
+}
+
+/* 상단에 가로줄 추가 */
+.post-content::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3); /* 옅은 흰색 */
+    position: absolute;
+    top: 0; /* 상단에 위치 */
+    left: 0;
+}
+/* 에러창 기본크기 */
+.error-container{
+	min-height:600px;
+}
+
+/* pass */
+
+.pass-box{
+	text-align:center;
+	padding:50px 50px 100px;
+	
+}
+.pass-box p{
+	margin-bottom:50px;
+	color:red;
+	
+}
+.bbspass{
+	width:50%;
+	padding:40px;
+	margin:auto;
+	background:#ddd;
+}
+.bbspass>.password{
+	margin-bottom:40px;
+}
