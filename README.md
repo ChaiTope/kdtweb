@@ -86,7 +86,7 @@
 
 | ERD | 이미지 |
 | --- | ------ |
-| ERD | ![ERD](./git_images/ERD.png) |
+| ERD | ![ERD](./git_images/ERD.PNG) |
 
 ---
 
